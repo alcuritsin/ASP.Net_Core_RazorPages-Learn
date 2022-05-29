@@ -11,4 +11,17 @@ public class CatalogController : Controller
     {
         return View(_catalog);
     }
+
+    [HttpGet]
+    public IActionResult ProductAdding()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult ProductAdding([FromForm] Product product)
+    {
+        _catalog.AddProduct(product);
+        return View();
+    }
 }
