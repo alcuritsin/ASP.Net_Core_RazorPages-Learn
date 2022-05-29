@@ -1,0 +1,13 @@
+@model Catalog;
+
+@{
+    ViewData["Title"] = "Catalog";
+}
+
+<h2>Каталог</h2>
+
+@foreach (Product product in Model.GetCatalog())
+{
+    <img style="height: 50px" src="@product.Img" alt="@product.Name">
+    <span>Продукт: </span> @product.Name <span>Цена: </span> @product.Price <br/>
+}
