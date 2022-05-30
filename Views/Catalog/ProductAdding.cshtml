@@ -2,11 +2,13 @@
 	ViewData["Title"] = "Product adding";
 }
 
+<h1>Добавление товара</h1>
+
 <form method="post">
-	<div>Id: <input type="text" name="id" required/> </div>
-	<div>Имя: <input type="text" name="name"/></div>
-	<div>Цена: <input type="text" name="price"/></div>
-	<div>Картинка: <input type="text" name="img"/></div>
+	<div>Id: <input type="text" name="Id" required/> </div>
+	<div>Имя: <input type="text" name="Name"/></div>
+	<div>Цена: <input type="number" step="any" name="Price"/></div>
+	<div>Картинка: <input type="text" name="Img"/></div>
 
 	<div><input type="submit" name="submit" value="Создать"/></div>
 </form>

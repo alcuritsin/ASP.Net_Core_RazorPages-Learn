@@ -24,4 +24,11 @@ public class CatalogController : Controller
         _catalog.AddProduct(product);
         return View();
     }
+    
+    public IActionResult Product(int id)
+    {
+        Product product = new Product();
+        product  = _catalog.GetProductFromId(id);
+        return View(product);
+    }
 }

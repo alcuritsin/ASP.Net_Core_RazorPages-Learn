@@ -17,7 +17,7 @@ public class Catalog
         _products.Add(product);
     }
     
-    public void AddArray(Product[] products)
+    public void AddArray(IEnumerable<Product> products)
     {
         foreach (Product product in products)
         {
@@ -29,7 +29,20 @@ public class Catalog
     {
         return _products.ToList();
     }
-    
+
+    public Product GetProductFromId(int id)
+    {
+        foreach (Product product in _products)
+        {
+            if (product.Id == id)
+            {
+                return product;
+            }
+        }
+
+        return null;
+    }
+
     private void LoadData()
     {
         //  Init catalog

@@ -1,0 +1,14 @@
+@model Product;
+
+@{
+    ViewData["Title"] = $"${Model.Name}";
+}
+
+<h1>О продукте</h1>
+
+<div class="product-card">
+    <div>Id: @Model.Id</div>
+    <div>@Model.Name</div>
+    <div>@Model.Price</div>
+    <img style="height: 50px" src="@Model.Img" alt="@Model.Name">
+</div>
