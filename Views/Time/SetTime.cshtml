@@ -1,0 +1,17 @@
+@{
+	ViewData["Title"] = "Setting Time";
+}
+
+<h1>Установка часов</h1>
+
+<form method="post">
+	<div>Year: <input type="number" name="Year" max="3000" min="0"/> </div>
+	<div>Month: <input type="number" name="Month" max="12" min="1"/></div>
+	<div>Day: <input type="number" name="Day" max="31" min="1"/></div>
+	<br/>
+	<div>Hour: <input type="number" name="Hour" max="23" min="0"/> </div>
+	<div>Minute: <input type="number" name="Minute" max="59" min="0"/></div>
+	<div>Second: <input type="number" name="Second" max="59" min="0"/></div>
+
+	<div><input type="submit" name="submit" value="Установить"/></div>
+</form>
