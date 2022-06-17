@@ -7,4 +7,9 @@
         <RootNamespace>ASP.Net_Core_RazorPages_Learn</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="MailKit" Version="3.3.0" />
+      <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="7.0.0-preview.5.22301.12" />
+    </ItemGroup>
+
 </Project>

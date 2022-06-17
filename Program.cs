@@ -1,7 +1,12 @@
+using ASP.Net_Core_RazorPages_Learn.BackgraundServices;
+using ASP.Net_Core_RazorPages_Learn.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IEmailSender, MailKitSender>();
+builder.Services.AddHostedService<ServerStartingNotifier>();
 
 var app = builder.Build();
 
